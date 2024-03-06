@@ -1,0 +1,6 @@
+{
+    let result := add(0x07, 0x08)
+    let freeMemoryPointer := mload(0x40)
+    mstore(freeMemoryPointer, result)
+    mstore(0x40, add(freeMemoryPointer, 0x20))
+}
